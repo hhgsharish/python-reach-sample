@@ -39,6 +39,10 @@ def initialize_database():
    Custom responses
 """
 
+@app.route("/health")
+def health_check():
+    return "OK", 200
+    
 @app.after_request
 def after_request(response):
     """
